@@ -53,7 +53,7 @@ namespace Platformer
             }
 
             // Slam
-            if (Input.GetKeyDown(KeyCode.LeftControl) && !isGrounded)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isGrounded)
             {
                 mass *= 2f;
                 accel = 3f;
