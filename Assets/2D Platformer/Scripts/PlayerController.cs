@@ -7,8 +7,10 @@ namespace Platformer
 {
     public class PlayerController : MonoBehaviour
     {
+        public float force = 0;
+        public float accel = 5.5f;
+        public float mass = 1;
         public float movingSpeed;
-        public float jumpForce;
         private float moveInput;
 
         public bool deathState = false;
@@ -44,7 +46,19 @@ namespace Platformer
             // Jump
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                mass = rb.mass;
+                accel = 5.5f;
+                force = mass * accel;
+                rb.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+            }
+
+            // Slam
+            if (Input.GetKeyDown(KeyCode.LeftControl) && !isGrounded)
+            {
+                mass *= 2f;
+                accel = 3f;
+                force = mass * accel;
+                rb.AddForce(Vector2.down * force, ForceMode2D.Impulse);
             }
 
             // Flip sprite (simpler)

@@ -2707,6 +2707,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6200000, guid: 116c6e635d5e6824ebbb0990d7947198, type: 2}
     - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
+      propertyPath: mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
+      propertyPath: accel
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
       propertyPath: jumpForce
       value: 5.5
       objectReference: {fileID: 0}
